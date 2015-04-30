@@ -1,0 +1,25 @@
+From 9d7383422ac45c6d14d0fcfa81ea76af877f451b Mon Sep 17 00:00:00 2001
+From: Robert <rob3rt.schuster@yahoo.com>
+Date: Tue, 28 Apr 2015 20:41:37 +0200
+Subject: [PATCH] fixed why.py
+
+---
+ waflib/extras/why.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/waflib/extras/why.py b/waflib/extras/why.py
+index 554914e..b2f5d7e 100644
+--- a/waflib/extras/why.py
++++ b/waflib/extras/why.py
+@@ -21,7 +21,7 @@ def signature(self):
+ 	except AttributeError: pass
+ 
+ 	self.m = Utils.md5()
+-	self.m.update(self.hcode.encode())
++	self.m.update(self.hcode)
+ 	id_sig = self.m.digest()
+ 
+ 	# explicit deps
+-- 
+1.9.3
+
